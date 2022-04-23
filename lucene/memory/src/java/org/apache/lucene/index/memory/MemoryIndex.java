@@ -17,6 +17,8 @@
 package org.apache.lucene.index.memory;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -1879,4 +1881,11 @@ public class MemoryIndex {
       return super.clear();
     }
   }
+
+  static {
+    Path p = Paths.get("../../../native/target/debug/libmemory.dylib");
+    System.load(p.toAbsolutePath().toString());
+  }
+
+  public native int add(int v1, int v2);
 }

@@ -3,6 +3,8 @@
 /gradle.properties
 .gradle/
 build/
+target/
+cargo.lock
 
 # Ignore gradle wrapper jar.
 gradle/wrapper/gradle-wrapper.jar

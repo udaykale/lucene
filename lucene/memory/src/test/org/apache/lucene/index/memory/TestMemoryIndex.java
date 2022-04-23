@@ -687,4 +687,10 @@ public class TestMemoryIndex extends LuceneTestCase {
             + "fields=2, terms=2, positions=3",
         mi.toStringDebug());
   }
+
+  public void testAddInt() {
+    MemoryIndex mi = new MemoryIndex(true, true);
+    int sum = mi.add(1, 3);
+    assertEquals(sum, 4);
+  }
 }
